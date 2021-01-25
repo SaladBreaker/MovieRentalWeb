@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "movies_rentals"
+version = "0.1.0"
+description = ""
+authors = ["vlad.luca <vlad.luca@syneto.eu>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+Django = "^3.1.4"
+psycopg2-binary = "^2.8.6"
+django-allauth = "^0.44.0"
+python-social-auth = "^0.3.6"
+social-auth-app-django = "^4.0.0"
+django-phonenumber-field = {extras = ["phonenumbers"], version = "^5.0.0"}
+django-boost = "^1.7.2"
+django-auto-one-to-one = "^3.3.1"
+
+[tool.poetry.dev-dependencies]
+pylint = "^2.6.0"
+black = {version = "^20.8b1", allow-prereleases = true}
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

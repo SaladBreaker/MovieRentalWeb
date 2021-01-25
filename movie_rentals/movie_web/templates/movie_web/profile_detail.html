@@ -1,0 +1,56 @@
+{% extends './base.html' %}
+
+{% block head%}
+
+<style>
+    h1 {
+        text-align: center;
+    }
+
+    p {
+        text-align: center;
+    }
+
+    h2 {
+        text-align: center;
+        color: white;
+    }
+
+    li {
+        text-align: center;
+        margin-bottom: 2vh;
+    }
+</style>
+
+{% endblock head%}
+
+
+{% block content %}
+
+<div style="height: 30vh;"></div>
+<div>
+    <h1 style="color:white; font-size:50px;"> {{ object.name }}</h1>
+    <h1 style="color:white; font-size:20px;">Contact number: {{ object.phone_number }}</h1>
+    <div style="text-align: center; margin-bottom: 5vh;">
+        <a href="{% url 'profile_update' %}"> Edit Profile </a>
+    </div>
+
+    <div>
+
+        <p style="color:white;font-size:20px;"><b>Movies:</b></p>
+        {% for movie in movies %}
+        <div>
+            <p style="color:white;font-size:17px;">
+            <p style="color: #fb3f00; text-decoration: none;">
+            <h2>{{movie.name}}</h2>
+            <div style="text-align: center;">
+                <a href="{% url 'movie_details' movie.id%}"> View </a>
+                <a href="{% url 'movie_update' movie.id%}"> Edit </a>
+                <a href="{% url 'movie_delete' movie.id%}"> Delete </a>
+            </div>
+            </p>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{%endblock content%}

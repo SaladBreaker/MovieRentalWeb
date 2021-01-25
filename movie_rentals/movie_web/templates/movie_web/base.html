@@ -1,0 +1,43 @@
+{% load socialaccount %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Rental Movies</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'movie_web/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'movie_web/navbar.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'movie_web/search_bar.css' %}">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        strong {
+            color: red;
+        }
+    </style>
+    {% block head %}
+    {% endblock head%}
+</head>
+
+
+<body style="background-color:	#282828;">
+    <nav class="navbar">
+
+        <ul>
+            {% if user.is_authenticated %}
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'profile_details' %}">My Profile</a></li>
+            <li><a href="{% url 'movie_create'%}">Add Movie</a></li>
+            <li><a href="{% url 'logout' %}">Log Out</a></li>
+            {% else %}
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% provider_login_url 'google' %}">Login</a></li>
+            {% endif %}
+        </ul>
+    </nav>
+    {% block content %}
+    {% endblock content%}
+</body>
+
+</html>

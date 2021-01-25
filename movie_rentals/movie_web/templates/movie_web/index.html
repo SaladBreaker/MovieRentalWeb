@@ -1,0 +1,33 @@
+{% extends './base.html' %}
+
+{% block content %}
+
+<div class="wrapper">
+
+    <div class="center">
+        <h1>Welcome To Our Website</h1>
+        <h2>Explore The Cinematic World With Us</h2>
+        <br></br>
+        <h3>See our selection of movies</h3>
+        <br></br>
+
+
+        <form method="GET" action="" style="margin-bottom: 3vh;">
+            <li id="search_li">
+                <input type="search" name="search" id="search" placeholder="Search for a movie..." />
+                <button tyhype="submit" name="search_button" id="search_button"> Search </button>
+            </li>
+        </form>
+
+        <div class="btn-group">
+            {% for result in search_results %}
+            <button><a href="{% url 'public_profile' result.id %}">{{ result.name }}</a></button>
+            {% empty %}
+            <h3>No results found 😞</h3>
+            {% endfor %}
+        </div>
+    </div>
+
+
+</div>
+{% endblock content %}

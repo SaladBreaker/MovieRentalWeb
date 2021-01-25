@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:700&display=swap');
+*{
+	padding: 0;
+	margin: 0;
+}
+.wrapper{
+	background: url(./photos/cinema.jpg) no-repeat;
+	background-size: cover;
+	height: 100vh;
+
+}
+
+.wrapper .center{
+	position: absolute;
+	left: 50%;
+	top: 55%;
+	transform: translate(-50%, -50%);
+	font-family: sans-serif;
+	user-select: none;
+}
+
+.center h1{
+	color: white;
+	font-size: 70px;
+	width: 900px;
+	font-weight: bold;
+	text-align: center;
+}
+.center h2{
+	color: white;
+	font-size: 55px;
+	font-weight: bold;
+	margin-top: 10px;
+	width: 885px;
+	text-align: center;
+}
+.center h3{
+	color: white;
+  text-align: center;
+
+}
+.center .buttons{
+	margin: 35px 280px;
+}
+.buttons button{
+	height: 50px;
+	width: 150px;
+	font-size: 18px;
+	font-weight: 600;
+	color: #ffb3b3;
+	background: black;
+	outline: none;
+	cursor: pointer;
+	border: 1px solid #cc0000;
+	border-radius: 25px;
+	transition: .4s;
+	float: right;
+}
+
+
+.buttons button:hover{
+	background: #cc0000;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: black;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+
+
+.topnav input[type=text] {
+  float: right;
+  padding: 6px;
+  border: none;
+  margin-top: 8px;
+  margin-right: 16px;
+  font-size: 17px;
+}
+
+
+.btn-group button {
+  background-color: black;; /* Green background */
+  border: 1px solid red; /* Green border */
+  color: #ffb3b3; /* White text */
+  padding: 10px 24px; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+  width: 50%; /* Set a width if needed */
+  display: block; /* Make the buttons appear below each other */
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border-radius: 25px;
+  text-decoration: inherit;
+  color: inherit;
+  font-size: 20px;
+}
+
+.btn-group button:not(:last-child) {
+  border-bottom: none; /* Prevent double borders */
+}
+
+/* Add a background color on hover */
+.btn-group button:hover {
+  background-color: #cc0000;
+}
+
+a:link {
+  color: #ffb3b3;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #ffb3b3;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color:#ffb3b3;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:active {
+  color: #ffb3b3;
+  background-color: transparent;
+  text-decoration: underline;
+}

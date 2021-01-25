@@ -1,0 +1,17 @@
+{% extends './base.html' %}
+{% block head%}
+<style>
+    form {
+        text-align: center;
+    }
+
+    h3 {
+        text-align: center;
+    }
+</style>
+{% endblock head%}
+{% block content %}
+<div style="height: 30vh;"></div>
+<h3 style="color:white; font-size:50px;">Update Your Profile Info!</h3>
+{% include "./_form.html" %}
+{% endblock content%}

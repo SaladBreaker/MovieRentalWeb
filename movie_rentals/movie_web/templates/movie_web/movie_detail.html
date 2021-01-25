@@ -1,0 +1,38 @@
+{% extends './base.html' %}
+
+{% block head%}
+
+<style>
+    h1 {
+        text-align: center;
+    }
+
+    p {
+        text-align: center;
+        vertical-align: middle;
+    }
+</style>
+
+{% endblock head%}
+
+
+{% block content %}
+<div style="height: 30vh;"></div>
+<div>
+    <h1 style="color:white; font-size:50px; ">{{ object.name }}</h1>
+    <div>
+
+        <p style="color:white;font-size:20px;"><b> Added on: {{object.created_at}}</b></p>
+        <p style="color:white;font-size:19px;"><b> Category: {{ object.category }}</b></p>
+        <p style="color:white;font-size:19px;"><b>Price: {{object.price}} $</b></p>
+
+        <p style="color:white;font-size:18px;">{{object.description}}</p>
+        <br></br>
+        <p style="color:white;font-size:16px;">Owner: <u>{{object.owner.name}}</u></a></p>
+        <p style="color:white;font-size:16px;">Owner contact: <u>{{object.owner.phone_number}}</u></a></p>
+
+    </div>
+</div>
+{% endblock content %}
+
+</html>

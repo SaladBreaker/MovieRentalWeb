@@ -1,0 +1,22 @@
+<form method="post">{% csrf_token %}
+    {% for form_field in form %}
+    <div>
+        {{ field.errors }}
+        <label style="color:white;font-size:20px;" for="{{form_field.id_for_label}}">{{ form_field.label }}</label>
+        <input type="{{form_field.field.widget.input_type}}" id="{{form_field.id_for_label}}" name="{{form_field.name}}"
+            class="w3-btn w3-white w3-border w3-round-large" placeholder="{{form_field.field.widget.placeholder}}">
+        {% for error in form_field.errors %}
+        <div class="alert alert-danger">
+            <strong>{{ error|escape }}</strong>
+        </div>
+        {% endfor %}
+        <br><br>
+    </div>
+    {% endfor %}
+    <input type="submit" value="Submit" class="w3-btn w3-white w3-border w3-round-large" style="margin-top: 20px;">
+    {% for error in form.non_field_errors %}
+    <div class="alert alert-danger">
+        <strong>{{ error|escape }}</strong>
+    </div>
+    {% endfor %}
+</form>
