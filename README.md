@@ -10,4 +10,10 @@ Also follow: https://realpython.com/adding-social-authentication-to-django/ to a
 run
  - poetry install 
  - poetry shell 
- 
+ - python manager.py runserver
+
+
+Contributors:
+ - [Alexandra Pert](https://github.com/alexandrapert) 
+ - [Ozana Muresan](https://github.com/ozanamuresan)
+ - [Vlad Luca](https://github.com/SaladBreaker)
